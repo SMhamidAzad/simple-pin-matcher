@@ -21,11 +21,14 @@ document.getElementById('key-pad').addEventListener('click',function(event){
         if(numbers == 'C'){
             calcInput.value = '';
         }
+        if(numbers == '<'){
+            calcInput.value=calcInput.value.slice(0,-1);
+        }
     }
     else{
         const previousNumber = calcInput.value;
         const newNumber = previousNumber + numbers;
-        calcInput.value = newNumber; 
+        calcInput.value= newNumber; 
     }
 })
 
